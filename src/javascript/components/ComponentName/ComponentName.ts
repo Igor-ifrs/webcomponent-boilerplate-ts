@@ -137,8 +137,8 @@ class __ComponentName__ extends HTMLElement {
 }
 
 // Registro do Componente
-if (!customElements.get("wc-component")) {
-  customElements.define("wc-component", __ComponentName__);
+if (!customElements.get("wc-componentName")) {
+  customElements.define("wc-componentName", __ComponentName__);
 }
 
 export default __ComponentName__;
