@@ -1,3 +1,3 @@
 import "/src/styles/global.css";
-import "./components/Component/Component.ts";
+import "./components/ComponentName/ComponentName.ts";
 console.log("load");
