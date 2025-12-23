@@ -1,9 +1,9 @@
-import _componenteNameTemplate from "./_componenteNameTemplate.ts";
+import _componentNameTemplate from "./_componentNameTemplate.ts";
 import style from "./componentName.css?inline"; //🧪 esse tipo de imporação só funciona no vite eu acho 😅
 
 // cria uma nova folha de estilo fazia depois preenche com o estilo importado
-const _componenteNameStyle = new CSSStyleSheet();
-_componenteNameStyle.replaceSync(style);
+const _componentNameStyle = new CSSStyleSheet();
+_componentNameStyle.replaceSync(style);
 /**
  * Interface para definir a estrutura de props ou estado se necessário
  * interface ComponenteProps {
@@ -130,20 +130,20 @@ class __ComponentName__ extends HTMLElement {
 
   private render(): void {
     if (!this.shadowRoot) return;
-    this.shadowRoot.adoptedStyleSheets = [_componenteNameStyle];
+    this.shadowRoot.adoptedStyleSheets = [_componentNameStyle];
     this.shadowRoot.innerHTML = "";
-    this.shadowRoot.appendChild(_componenteNameTemplate.content.cloneNode(true));
+    this.shadowRoot.appendChild(_componentNameTemplate.content.cloneNode(true));
   }
 }
 
 // Registro do Componente
-if (!customElements.get("wc-componentName")) {
-  customElements.define("wc-componentName", __ComponentName__);
+if (!customElements.get("wc-componentname")) {
+  customElements.define("wc-componentname", __ComponentName__);
 }
 
 export default __ComponentName__;
 
 /* 
 ✋ Não esqueça de importar o componente import "../__ComponentName__.ts"
-
+   E de inserir ou criar o elemento no HTML <wc-componentName></wc-componentName>
 */
