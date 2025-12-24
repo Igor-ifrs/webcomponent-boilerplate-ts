@@ -1,5 +1,7 @@
 import _componentNameTemplate from "./_componentNameTemplate.ts";
-import style from "./componentName.css?inline"; //🧪 esse tipo de imporação só funciona no vite eu acho 😅
+
+//import style from "./componentName.css?inline"; //⚠️ Descomante essa linha se vc esta usando um bundler como o vite
+const style = `:host{color:red; button{padding: 2rem;cursor: pointer;}}`;
 
 // cria uma nova folha de estilo fazia depois preenche com o estilo importado
 const _componentNameStyle = new CSSStyleSheet();
